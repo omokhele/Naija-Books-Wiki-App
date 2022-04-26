@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios'
+import apiUrl from '../../api';
+
 // import { data } from '../../services/constants'
 
 function Book () {
@@ -14,7 +16,7 @@ function Book () {
     useEffect(() => {
         const fetchData = async() => {
             try{
-                const response = await axios(`http://localhost:3000/api/details/${id}`)
+                const response = await axios(`${apiUrl}/details/${id}`)
                 setBook(response.data.detail)
             }catch(error) {
                 console.error(error)
@@ -31,7 +33,7 @@ function Book () {
 
     const destroy = () => {
         axios({
-            url: `http://localhost:3000/api/details/${id}`,
+            url: `${apiUrl}/details/${id}`,
             method: 'DELETE'
         }).then(()=> setDeleted(true)).catch(console.error)
         

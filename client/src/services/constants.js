@@ -1,8 +1,9 @@
 import axios from 'axios'
+import apiUrl from '../api';
 
 export const data = async()  => {
     try{
-        const response = await axios.get("http://localhost:3000/api/details")
+        const response = await axios.get(`${apiUrl}/details`)
         // console.log(response)
         return response;
     } catch(error) {
@@ -12,7 +13,7 @@ export const data = async()  => {
 
 export const fetchData = async(input)  => {
     try{
-        const response = await axios.get(`http://localhost:3000/api/search/${input}`)
+        const response = await axios.get(`${apiUrl}/search/${input}`)
         // console.log(response)
         return response;
     } catch(error) {

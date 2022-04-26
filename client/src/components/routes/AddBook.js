@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 // import Books from './Books';
 import Form from '../layout/Form';
+import apiUrl from '../../api';
 
 function AddBook() {
     const navigate = useNavigate();
@@ -26,7 +27,7 @@ function AddBook() {
     const handleSubmit = (event) => {
         event.preventDefault()
         axios({
-            url: `http://localhost:3000/api/details`,
+            url: `${apiUrl}/details`,
             method: 'POST',
             data: book,
         }).then(res => setCreatedBook(res.data)).catch(console.error)

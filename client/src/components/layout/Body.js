@@ -8,7 +8,7 @@ const Body = () => {
         
         <div className="col-3"> 
         <div>
-            <h4 className="filter" >Filter</h4>
+            <h4 className="filter">Filter</h4>
             <div className="text-center text-decoration-underline">Clear Filter</div>
             <div className="accordion" id="accordionExample">
   <div className="accordion-item">

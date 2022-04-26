@@ -3,6 +3,7 @@ import { useNavigate, useParams} from 'react-router-dom';
 import axios from 'axios'
 import Form from '../layout/Form';
 // import Book from './Book';
+import apiUrl from '../../api';
 
 function EditBook() {
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ const [edited, setEdited] = useState(false)
 useEffect(()=> {
     const fetchData = async() => {
     try{
-        const response = await axios(`http://localhost:3000/api/details/${id}`)
+        const response = await axios(`${apiUrl}/details/${id}`)
         console.log('editBook', response.data.detail);
         setBook(response.data.detail)
     }catch (err) {
@@ -42,7 +43,7 @@ const handleChange = (event) => {
 const handleSubmit = (event) => {
     event.preventDefault()
     axios({
-        url: `http://localhost:3000/api/details/${id}`,
+        url: `${apiUrl}/details/${id}`,
         method: 'PUT',
         data: book
     }).then(() => setEdited(true)).catch(console.error)

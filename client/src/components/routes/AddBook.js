@@ -26,7 +26,7 @@ function AddBook() {
     const handleSubmit = (event) => {
         event.preventDefault()
         axios({
-            url: `http://localhost:3000/api/detail`,
+            url: `http://localhost:3000/api/details`,
             method: 'POST',
             data: book,
         }).then(res => setCreatedBook(res.data)).catch(console.error)

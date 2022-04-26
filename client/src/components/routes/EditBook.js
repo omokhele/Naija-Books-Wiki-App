@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams} from 'react-router-dom';
 import axios from 'axios'
 import Form from '../layout/Form';
-import Book from './Book';
+// import Book from './Book';
 
 function EditBook() {
     const navigate = useNavigate();
@@ -57,7 +57,7 @@ useEffect(() => {
 
 return (
     <div>
-<Book>
+
     <Form
 book ={book}
 // blurb ={book.blurb}
@@ -69,7 +69,7 @@ handleChange={(e) => handleChange(e)}
 handleSubmit={(e) => handleSubmit(e)}
 cancelPath = {`/books/${id}`}
 />
-</Book>
+
     </div>
 )
 }

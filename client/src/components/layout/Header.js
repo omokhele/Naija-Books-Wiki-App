@@ -9,10 +9,10 @@ const Header = () => {
         <NavLink to='/' className="navLink">HOME</NavLink>
         <NavLink to='/about' className="navLink">ABOUT</NavLink>
         <NavLink to='/search' className="navLink">SEARCH</NavLink>
-        {/* <NavLink to='/books/id' className="navLink">BOOK</NavLink> */}
+       
         <NavLink to='/books' className="navLink">BOOKS</NavLink>
         <NavLink to='/addBook' className="navLink">ADD BOOK</NavLink>
-        {/* <NavLink to='/editBook' className="navLink">EDIT BOOK</NavLink> */}
+        
     </nav>
     </div>
     )

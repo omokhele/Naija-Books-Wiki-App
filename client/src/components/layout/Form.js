@@ -3,53 +3,53 @@ import { Link } from 'react-router-dom';
 const Form = ({book, handleSubmit, handleChange, cancelPath}) => {
     return(
         <div>   
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
             <label>Book</label>
-            <input
+            <input className="input"
             placeholder="Book"
             defaultValue={book.book}
             name="book"
             onChange={(e)=>handleChange(e)}
             /> 
 
-            <input
+            <input className="input"
             placeholder="Blurb"
             defaultValue={book.blurb}
             name="blurb"
             onChange={(e)=>handleChange(e)}
             /> 
 
-            <input
+            <input className="input"
             placeholder="Book Image"
             defaultValue={book.bookImage}
             name="bookImage"
             onChange={(e)=>handleChange(e)}
             /> 
 
-            <input
+            <input className="input"
             placeholder="Author"
             defaultValue={book.author}
             name="author"
             onChange={(e)=>handleChange(e)}
             /> 
 
-            <input
+            <input className="input"
             placeholder = "Bio"
             defaultValue={book.bio}
             name="bio"
             onChange={(e)=>handleChange(e)}
             /> 
 
-            <input
+            <input className="input"
             placeholder="Author Image"
             defaultValue={book.authorImage}
             name="authorImage"
             onChange={(e)=>handleChange(e)}
             /> 
-            <button type="Submit">Submit</button>
+            <button className="input" type="Submit">Submit</button>
 
             <Link to={cancelPath}>
-                <button>Cancel</button>
+                <button className="input">Cancel</button>
             </Link>
         </form>
         </div>

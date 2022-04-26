@@ -1,17 +1,11 @@
 .header{
-  /* border: 1px solid black; */
-  /* width: 2000px; */
   height: 150px;
   background-color: rgb(87, 194, 194);
-  /* margin: auto; */
-  /* padding: 0px; */
-  /* text-align: center; */
   position: fixed;
-  /* top: 0; */
+  top: 0px;
   width: 100%;
   z-index: 1;
-  /* padding: 15px 15px; */
-  /* box-shadow: 1px 3px 3px 1px ; */
+ 
 }
 
 .whiteSpace{
@@ -75,22 +69,25 @@
 }
 
 .search{
+  margin-top: 300px;
   width: 40%;
   border-radius: 4px;
-  border:1px solid #e1b382;
+  border:1px solid pink;
   height: 40px;
   padding: 15px 15px;
-  box-shadow: 1px 3px 3px  ;
+  box-shadow: 1px 3px 3px ;
 }
 
 .button{
   height: 40px;
   box-shadow: 1px 3px 3px 1px ;
-  margin: 175px 10px;
+  margin: 300px 10px;
+  
 }
 
 .div1 {
   display: flex;
+  margin-left:-250px;
   
   
   /* background-color:#282c34 */
@@ -150,13 +147,16 @@
 }
 
 .aboutText{
-  margin-top: 200px;
+  margin-top: 150px;
   width: 500px;
   text-align: center;
   padding: 50px;
   font-size: 20px;
 }
 
+.inputSearch{
+  width: 500px
+}
 
 .App {
   text-align: center;
@@ -234,6 +234,31 @@ padding: 10px;
 
 .destroy{
   margin: 10px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 250px;
+  width: 500px;
+  margin-left: 700px;
+  
+}
+
+.input{
+  margin: 7.5px;
+  padding:7.5px;
+  border-radius: 10px;
+}
+
+label{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.searchDiv{
+  display: flex;
+  
 }
 
 /* .App-logo {

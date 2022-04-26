@@ -29,13 +29,15 @@ const Search = () => {
     return (
         
         <form className="justify-content-center form gap-4 mb-5">
-           <input type="text" placeholder="Search Books" className="search" onChange={(e) => handleChange(e)}/>
-            <input type="button" value="Enter" className="button fs-5" onClick={() => handleClick()} />
+            <div  className="searchDiv">
+           <input type="text" placeholder="Search Books" className="inputSearch" onChange={(e) => handleChange(e)}/>
+            <input type="button" value="Enter" className= "inputButton fs-5" onClick={() => handleClick()} />
+            </div>
             {
                 searchResults.map((searchResult, index) => {
                     const { book, blurb, bookImage, author, bio, authorImage} = searchResult
                     return <div className="div1">
-        <img src={bookImage} alt="books" className="bookImage"/>
+        <img src={bookImage} alt="books" className="searchImage"/>
         {/* <div className="content"> */}
         <div className="container">
         <h4 className="fs-4 fw-bold mb-4 text-start book">{book}</h4>
